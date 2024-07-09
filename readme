@@ -1,14 +1,17 @@
-To run ImageConvolution:
+
+## Image Convolution
+To build:
+```
 cd ImageConv
-Run the ``make`` command.
+make
+```
+The input ``file.pgm`` must be in data folder.
+The output is saved to the output folder.
 
-Input file.pgm must be in data folder
-Output is saved in the output folder
-
-The program takes in the following parameters:
+The program parameters are:
 KernalChoice InputFileName.pgm OutputFileName.pgm factor (in this order)
 
-The kernal choice available:
+Available kernals:
 0: Sharpen (3x3) 
 1: Emboss (3x3)
 2: Emboss (5x5)
@@ -19,8 +22,11 @@ The factor argument: If you want to multiply the kernel value by a factor, set i
 E.g.: Use average kernel, factor = 0.04
 ImageConv 3 InputFileName.pgm OutputFileName.pgm 0.04
 
-To run KNearest
+## K-Nearest
+To build:
+```
 cd KNearest
+```
 
 Three make options available:
 
