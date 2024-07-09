@@ -1,0 +1,421 @@
+------------------------------------------------------
+DATE: Mon Mar 25 06:23:43 PM SAST 2024
+Job is running on nodes  mscluster[33-35]
+------------------------------------------------------
+SLURM: sbatch is running on mscluster-login1.ms.wits.ac.za
+SLURM: job ID is 89758
+SLURM: submit directory is /home-mscluster/anana/test/KNearest
+SLURM: number of nodes allocated is 3
+SLURM: number of tasks is 3
+SLURM: job name is KNearest
+------------------------------------------------------
+---------Starting Benchmark------------
+=======================================
+Testing Dimension: 64
+=======================================
+Serial Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DSERIAL
+Testing array size 10000
+Validation passed!
+Distance computation time: 6.421426
+Sort computation time: 7.545842
+Completed program in 14.121983 seconds!
+Validation passed!
+Distance computation time: 6.401798
+Sort computation time: 7.716419
+Completed program in 14.271090 seconds!
+Validation passed!
+Distance computation time: 6.410356
+Sort computation time: 7.780502
+Completed program in 14.344810 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 105.090417
+Sort computation time: 113.478260
+Completed program in 221.443798 seconds!
+Validation passed!
+Distance computation time: 105.443285
+Sort computation time: 113.202404
+Completed program in 221.518182 seconds!
+Validation passed!
+Distance computation time: 105.358212
+Sort computation time: 116.161321
+Completed program in 224.411024 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 1103.963618
+Sort computation time: 2275.101064
+Completed program in 3480.297496 seconds!
+Validation passed!
+Distance computation time: 1098.867253
+Sort computation time: 2305.172399
+Completed program in 3505.445284 seconds!
+Validation passed!
+Distance computation time: 1101.815056
+Sort computation time: 2310.167388
+Completed program in 3513.797263 seconds!
+---------------------------------------
+Parallel Tasks Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DPARALLEL -DTASK 
+Testing array size 10000
+Validation passed!
+Distance computation time: 7.129136
+Sort computation time: 3.237172
+Completed program in 10.718082 seconds!
+Validation passed!
+Distance computation time: 7.416147
+Sort computation time: 3.042259
+Completed program in 10.820707 seconds!
+Validation passed!
+Distance computation time: 7.256915
+Sort computation time: 3.411684
+Completed program in 11.013169 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 77.727674
+Sort computation time: 33.148715
+Completed program in 114.741331 seconds!
+Validation passed!
+Distance computation time: 82.463734
+Sort computation time: 33.268926
+Completed program in 119.881878 seconds!
+Validation passed!
+Distance computation time: 81.720335
+Sort computation time: 36.142557
+Completed program in 121.700873 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 791.154942
+Sort computation time: 645.714880
+Completed program in 1547.765100 seconds!
+Validation passed!
+Distance computation time: 947.995026
+Sort computation time: 537.328016
+Completed program in 1601.227635 seconds!
+Validation passed!
+Distance computation time: 942.315829
+Sort computation time: 549.104072
+Completed program in 1608.496291 seconds!
+---------------------------------------
+Parallel Section Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DPARALLEL -DSECTION
+Testing array size 10000
+Validation passed!
+Distance computation time: 3.419883
+Sort computation time: 5.736268
+Completed program in 11.005638 seconds!
+Validation passed!
+Distance computation time: 3.389864
+Sort computation time: 7.423239
+Completed program in 12.732329 seconds!
+Validation passed!
+Distance computation time: 3.552633
+Sort computation time: 8.471440
+Completed program in 13.965155 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 34.337732
+Sort computation time: 89.021968
+Completed program in 129.519968 seconds!
+Validation passed!
+Distance computation time: 34.693947
+Sort computation time: 90.740838
+Completed program in 131.662569 seconds!
+Validation passed!
+Distance computation time: 34.308507
+Sort computation time: 98.094989
+Completed program in 138.320845 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 327.005207
+Sort computation time: 1430.912875
+Completed program in 1862.555307 seconds!
+Validation passed!
+Distance computation time: 328.561163
+Sort computation time: 1571.306144
+Completed program in 2002.626830 seconds!
+Validation passed!
+Distance computation time: 326.561888
+Sort computation time: 1852.778319
+Completed program in 2283.200723 seconds!
+---------------------------------------
+=======================================
+Testing Dimension: 128
+=======================================
+Serial Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DSERIAL
+Testing array size 10000
+Validation passed!
+Distance computation time: 12.298523
+Sort computation time: 7.682927
+Completed program in 20.136786 seconds!
+Validation passed!
+Distance computation time: 12.349846
+Sort computation time: 7.695660
+Completed program in 20.201367 seconds!
+Validation passed!
+Distance computation time: 12.621576
+Sort computation time: 7.645420
+Completed program in 20.427468 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 177.056523
+Sort computation time: 113.119636
+Completed program in 293.061946 seconds!
+Validation passed!
+Distance computation time: 178.137099
+Sort computation time: 112.003145
+Completed program in 293.026231 seconds!
+Validation passed!
+Distance computation time: 178.479079
+Sort computation time: 113.137174
+Completed program in 294.502239 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 2124.776678
+Sort computation time: 2233.699204
+Completed program in 4460.366378 seconds!
+Validation passed!
+Distance computation time: 2134.520929
+Sort computation time: 2313.620011
+Completed program in 4550.278135 seconds!
+Validation passed!
+Distance computation time: 2119.620079
+Sort computation time: 2638.306526
+Completed program in 4864.962696 seconds!
+---------------------------------------
+Parallel Tasks Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DPARALLEL -DTASK 
+Testing array size 10000
+Validation passed!
+Distance computation time: 7.467971
+Sort computation time: 3.847336
+Completed program in 11.668717 seconds!
+Validation passed!
+Distance computation time: 7.487217
+Sort computation time: 3.825588
+Completed program in 11.654502 seconds!
+Validation passed!
+Distance computation time: 7.357149
+Sort computation time: 3.987683
+Completed program in 11.701368 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 78.617871
+Sort computation time: 33.765050
+Completed program in 116.135054 seconds!
+Validation passed!
+Distance computation time: 85.849309
+Sort computation time: 31.772117
+Completed program in 121.441277 seconds!
+Validation passed!
+Distance computation time: 86.159321
+Sort computation time: 36.576222
+Completed program in 126.480701 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 968.174575
+Sort computation time: 544.906452
+Completed program in 1624.160941 seconds!
+Validation passed!
+Distance computation time: 976.617507
+Sort computation time: 546.431528
+Completed program in 1635.792164 seconds!
+Validation passed!
+Distance computation time: 992.053677
+Sort computation time: 603.243549
+Completed program in 1708.886528 seconds!
+---------------------------------------
+Parallel Section Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DPARALLEL -DSECTION
+Testing array size 10000
+Validation passed!
+Distance computation time: 3.527106
+Sort computation time: 7.964359
+Completed program in 13.406703 seconds!
+Validation passed!
+Distance computation time: 3.531487
+Sort computation time: 8.905972
+Completed program in 14.329541 seconds!
+Validation passed!
+Distance computation time: 3.603065
+Sort computation time: 9.920752
+Completed program in 15.476956 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 36.349593
+Sort computation time: 90.674713
+Completed program in 132.904204 seconds!
+Validation passed!
+Distance computation time: 37.699341
+Sort computation time: 99.203626
+Completed program in 143.021823 seconds!
+Validation passed!
+Distance computation time: 43.073064
+Sort computation time: 121.779924
+Completed program in 171.006174 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 411.925059
+Sort computation time: 1733.267501
+Completed program in 2251.341285 seconds!
+Validation passed!
+Distance computation time: 399.405477
+Sort computation time: 2234.397790
+Completed program in 2743.216470 seconds!
+Validation passed!
+Distance computation time: 420.697288
+Sort computation time: 2249.682616
+Completed program in 2774.385452 seconds!
+---------------------------------------
+=======================================
+Testing Dimension: 256
+=======================================
+Serial Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DSERIAL
+Testing array size 10000
+Validation passed!
+Distance computation time: 44.951143
+Sort computation time: 7.817643
+Completed program in 52.934551 seconds!
+Validation passed!
+Distance computation time: 45.041777
+Sort computation time: 7.795387
+Completed program in 53.016300 seconds!
+Validation passed!
+Distance computation time: 45.448805
+Sort computation time: 7.668780
+Completed program in 53.294560 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 469.765850
+Sort computation time: 112.470003
+Completed program in 585.114223 seconds!
+Validation passed!
+Distance computation time: 469.502303
+Sort computation time: 115.236719
+Completed program in 587.635194 seconds!
+Validation passed!
+Distance computation time: 472.813829
+Sort computation time: 115.204384
+Completed program in 590.898446 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 4735.146221
+Sort computation time: 2288.450483
+Completed program in 7126.846673 seconds!
+Validation passed!
+Distance computation time: 4731.474519
+Sort computation time: 2294.278274
+Completed program in 7128.890870 seconds!
+Validation passed!
+Distance computation time: 4764.574698
+Sort computation time: 2313.658440
+Completed program in 7179.848057 seconds!
+---------------------------------------
+Parallel Tasks Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DPARALLEL -DTASK 
+Testing array size 10000
+Validation passed!
+Distance computation time: 9.416831
+Sort computation time: 3.245782
+Completed program in 13.023189 seconds!
+Validation passed!
+Distance computation time: 9.559060
+Sort computation time: 3.170009
+Completed program in 13.057837 seconds!
+Validation passed!
+Distance computation time: 9.598660
+Sort computation time: 3.666624
+Completed program in 13.611433 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 86.400958
+Sort computation time: 32.580274
+Completed program in 122.671990 seconds!
+Validation passed!
+Distance computation time: 97.698176
+Sort computation time: 30.681450
+Completed program in 132.321385 seconds!
+Validation passed!
+Distance computation time: 98.473463
+Sort computation time: 36.977099
+Completed program in 139.543121 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 922.579144
+Sort computation time: 560.657906
+Completed program in 1600.785575 seconds!
+Validation passed!
+Distance computation time: 1012.616414
+Sort computation time: 555.916920
+Completed program in 1678.360511 seconds!
+Validation passed!
+Distance computation time: 1002.589065
+Sort computation time: 609.695246
+Completed program in 1729.685479 seconds!
+---------------------------------------
+Parallel Section Version
+gcc -fopenmp -O3 main.c src/qsort.c src/bfKNN.c -o KNearest -lm -DPARALLEL -DSECTION
+Testing array size 10000
+Validation passed!
+Distance computation time: 7.804939
+Sort computation time: 6.260886
+Completed program in 16.282245 seconds!
+Validation passed!
+Distance computation time: 8.174730
+Sort computation time: 7.600859
+Completed program in 18.064660 seconds!
+Validation passed!
+Distance computation time: 7.815488
+Sort computation time: 8.668684
+Completed program in 18.637438 seconds!
+---------------------------------------
+Testing array size 100000
+Validation passed!
+Distance computation time: 80.706331
+Sort computation time: 79.858108
+Completed program in 167.157935 seconds!
+Validation passed!
+Distance computation time: 82.180168
+Sort computation time: 90.515645
+Completed program in 179.283965 seconds!
+Validation passed!
+Distance computation time: 80.000190
+Sort computation time: 127.436530
+Completed program in 213.622293 seconds!
+---------------------------------------
+Testing array size 1000000
+Validation passed!
+Distance computation time: 714.952937
+Sort computation time: 1488.746139
+Completed program in 2307.970983 seconds!
+Validation passed!
+Distance computation time: 731.166658
+Sort computation time: 1483.621120
+Completed program in 2318.842837 seconds!
+Validation passed!
+Distance computation time: 803.576438
+Sort computation time: 2361.125405
+Completed program in 3274.402102 seconds!
+---------------------------------------
+=======================================
+--------------Clean Files--------------
+rm -f KNearest
+---------Benchmark Completed-----------
